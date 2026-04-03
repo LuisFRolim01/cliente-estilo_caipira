@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo Caipira – Moda Country Desde 2019</title>
+  <meta name="description" content="Estilo Caipira – Roupas, botas e acessórios country. Desde 2019 vestindo quem tem raiz.">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --marrom:        #3b1f0a;
+      --marrom-medio:  #5c2e0e;
+      --marrom-claro:  #8b4513;
+      --dourado:       #c8922a;
+      --dourado-claro: #e8b84b;
+      --creme:         #f5e6c8;
+      --creme-escuro:  #e8d4a8;
+      --branco:        #fff8ee;
+      --texto-escuro:  #2a1205;
+      --sombra-quente: rgba(59,31,10,0.55);
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--marrom);
+      color: var(--creme);
+      overflow-x: hidden;
+    }
+
+    /* ── TEXTURA MADEIRA via SVG inline ── */
+    .wood-bg {
+      background-color: #3b1f0a;
+      background-image:
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 2px,
+          rgba(255,255,255,0.015) 2px,
+          rgba(255,255,255,0.015) 4px
+        ),
+        repeating-linear-gradient(
+          180deg,
+          transparent,
+          transparent 18px,
+          rgba(0,0,0,0.12) 18px,
+          rgba(0,0,0,0.12) 20px
+        ),
+        linear-gradient(
+          175deg,
+          #4a2410 0%,
+          #3b1f0a 20%,
+          #2e1508 40%,
+          #3d2010 60%,
+          #4f2812 80%,
+          #3b1f0a 100%
+        );
+    }
+
+    .wood-light {
+      background-color: #6b3a1f;
+      background-image:
+        repeating-linear-gradient(
+          88deg,
+          transparent,
+          transparent 3px,
+          rgba(255,255,255,0.025) 3px,
+          rgba(255,255,255,0.025) 6px
+        ),
+        repeating-linear-gradient(
+          180deg,
+          transparent,
+          transparent 22px,
+          rgba(0,0,0,0.08) 22px,
+          rgba(0,0,0,0.08) 24px
+        ),
+        linear-gradient(
+          170deg,
+          #7a4520 0%,
+          #5c2e0e 30%,
+          #6b3a1f 60%,
+          #5c2e0e 100%
+        );
+    }
+
+    /* ── DIVISOR ORNAMENTAL ── */
+    .divider {
+      text-align: center;
+      padding: 6px 0;
+      color: var(--dourado);
+      font-size: 22px;
+      letter-spacing: 10px;
+      opacity: .7;
+    }
+
+    .section-tag {
+      display: inline-block;
+      border: 2px solid var(--dourado);
+      color: var(--dourado-claro);
+      font-size: 10px; font-weight: 900;
+      letter-spacing: 3px; text-transform: uppercase;
+      padding: 5px 16px; border-radius: 2px;
+      margin-bottom: 12px;
+    }
+
+    /* ══════════════════════════════
+       HEADER
+    ══════════════════════════════ */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: #1e0d03;
+      border-bottom: 3px solid var(--dourado);
+      padding: 0 32px;
+      height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+    }
+
+    .logo-header {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .logo-header img {
+      height: 50px; width: 50px;
+      object-fit: contain; border-radius: 4px;
+    }
+    .logo-nome {
+      font-family: 'Dancing Script', cursive;
+      font-size: 26px;
+      color: var(--dourado-claro);
+      line-height: 1;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+    .logo-nome small {
+      display: block;
+      font-family: 'Lato', sans-serif;
+      font-size: 10px; font-weight: 900;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--creme-escuro); opacity: .7;
+    }
+
+    nav.main-nav { display: flex; gap: 4px; align-items: center; }
+    nav.main-nav a {
+      color: var(--creme-escuro);
+      font-size: 13px; font-weight: 700;
+      letter-spacing: .5px; text-transform: uppercase;
+      padding: 7px 14px; border-radius: 3px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: color .2s, border-color .2s, background .2s;
+    }
+    nav.main-nav a:hover {
+      color: var(--dourado-claro);
+      border-color: rgba(200,146,42,.4);
+      background: rgba(200,146,42,.08);
+    }
+
+    .btn-whats-header {
+      background: var(--dourado);
+      color: var(--marrom);
+      padding: 9px 18px; border: none; border-radius: 4px;
+      font-weight: 900; font-size: 13px; letter-spacing: .5px;
+      cursor: pointer; font-family: 'Lato', sans-serif;
+      display: flex; align-items: center; gap: 7px;
+      transition: background .2s, transform .15s;
+      text-transform: uppercase;
+    }
+    .btn-whats-header:hover { background: var(--dourado-claro); transform: scale(1.04); }
+
+    /* hamburguer */
+    .menu-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--dourado); border-radius: 2px; }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    .hero {
+      min-height: 600px;
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero .wood-bg {
+      position: absolute; inset: 0;
+    }
+    /* Vinheta escura nas bordas */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, transparent 35%, rgba(15,5,0,.75) 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: 1140px; margin: 0 auto;
+      padding: 90px 32px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 60px;
+    }
+
+    .hero-text { animation: fadeInLeft .8s ease both; }
+
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; flex: 1; height: 1px; background: var(--dourado); opacity: .5;
+    }
+    .hero-eyebrow span {
+      font-size: 11px; font-weight: 900; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--dourado); white-space: nowrap;
+    }
+
+    .hero h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(52px, 6vw, 84px);
+      line-height: 1.0;
+      color: var(--branco);
+      text-shadow: 2px 4px 16px rgba(0,0,0,0.8);
+      margin-bottom: 6px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--dourado-claro);
+    }
+
+    .hero-sub {
+      font-family: 'Abril Fatface', cursive;
+      font-size: clamp(14px, 1.8vw, 18px);
+      letter-spacing: 5px; text-transform: uppercase;
+      color: var(--creme-escuro); opacity: .8;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 16px; line-height: 1.75;
+      color: rgba(245,230,200,.75);
+      max-width: 420px; margin-bottom: 36px;
+    }
+
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn-gold {
+      background: var(--dourado); color: var(--marrom);
+      padding: 13px 28px; border: none; border-radius: 4px;
+      font-size: 14px; font-weight: 900; letter-spacing: 1px;
+      text-transform: uppercase; cursor: pointer;
+      font-family: 'Lato', sans-serif;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(200,146,42,.4);
+    }
+    .btn-gold:hover { background: var(--dourado-claro); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,146,42,.55); }
+
+    .btn-ghost {
+      background: transparent; color: var(--creme);
+      padding: 13px 28px;
+      border: 2px solid rgba(245,230,200,.4);
+      border-radius: 4px; font-size: 14px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      cursor: pointer; font-family: 'Lato', sans-serif;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-ghost:hover { border-color: var(--dourado); background: rgba(200,146,42,.1); }
+
+    /* Quadro decorativo da logo no hero */
+    .hero-logo-frame {
+      position: relative; z-index: 2;
+      display: flex; align-items: center; justify-content: center;
+      animation: fadeInRight .8s ease both;
+    }
+    .hero-logo-inner {
+      position: relative;
+      padding: 20px;
+    }
+    /* Cantos decorativos */
+    .hero-logo-inner::before,
+    .hero-logo-inner::after {
+      content: '';
+      position: absolute;
+      width: 36px; height: 36px;
+      border-color: var(--dourado);
+      border-style: solid;
+      opacity: .6;
+    }
+    .hero-logo-inner::before { top: 0; left: 0; border-width: 3px 0 0 3px; }
+    .hero-logo-inner::after  { bottom: 0; right: 0; border-width: 0 3px 3px 0; }
+
+    .hero-logo-inner img {
+      width: clamp(240px, 28vw, 340px);
+      height: clamp(240px, 28vw, 340px);
+      object-fit: contain;
+      filter: drop-shadow(0 8px 32px rgba(0,0,0,0.7));
+    }
+
+    /* Canto extra */
+    .corner-tl, .corner-br {
+      position: absolute; width: 36px; height: 36px;
+      border-color: var(--dourado); border-style: solid; opacity: .6;
+    }
+    .corner-tl { top: 0; right: 0; border-width: 3px 3px 0 0; }
+    .corner-br { bottom: 0; left: 0; border-width: 0 0 3px 3px; }
+
+    /* ══════════════════════════════
+       FAIXA DOURADA
+    ══════════════════════════════ */
+    .faixa {
+      background: linear-gradient(90deg, var(--dourado) 0%, var(--dourado-claro) 50%, var(--dourado) 100%);
+      padding: 18px 32px;
+      display: flex; justify-content: center; align-items: center;
+      gap: 0;
+      overflow: hidden;
+    }
+    .faixa-item {
+      flex: 1; max-width: 220px; text-align: center;
+      padding: 6px 20px;
+      border-right: 1px solid rgba(59,31,10,.25);
+    }
+    .faixa-item:last-child { border-right: none; }
+    .faixa-num {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 36px; color: var(--marrom); line-height: 1;
+    }
+    .faixa-label {
+      font-size: 11px; font-weight: 900; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--marrom-medio); margin-top: 2px;
+    }
+
+    /* ══════════════════════════════
+       CATEGORIAS
+    ══════════════════════════════ */
+    .section { padding: 80px 0; }
+    .section .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
+    .section-header { text-align: center; margin-bottom: 52px; }
+    .section-header h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(40px, 4.5vw, 60px);
+      color: var(--dourado-claro);
+      text-shadow: 1px 2px 8px rgba(0,0,0,0.6);
+      line-height: 1.1;
+    }
+    .section-header p { color: rgba(245,230,200,.65); font-size: 15px; margin-top: 8px; }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+    }
+    .cat-card {
+      display: block; text-decoration: none;
+      border-radius: 4px; overflow: hidden;
+      border: 2px solid rgba(200,146,42,.2);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      cursor: pointer;
+      position: relative;
+    }
+    .cat-card:hover {
+      border-color: var(--dourado);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0,0,0,.5);
+    }
+    .cat-card-img {
+      height: 110px;
+      background: rgba(92,46,14,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 38px;
+      border-bottom: 2px solid rgba(200,146,42,.2);
+    }
+    .cat-card-body {
+      padding: 14px 12px;
+      text-align: center;
+    }
+    .cat-card-body h3 {
+      font-size: 13px; font-weight: 900; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--creme);
+    }
+    .cat-card-body small { font-size: 11px; color: var(--dourado); margin-top: 2px; display: block; }
+
+    /* ══════════════════════════════
+       PRODUTOS
+    ══════════════════════════════ */
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .prod-card {
+      border-radius: 4px; overflow: hidden;
+      border: 1px solid rgba(200,146,42,.18);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      display: flex; flex-direction: column;
+    }
+    .prod-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.6);
+      border-color: var(--dourado);
+    }
+
+    /* ── ESPAÇO DE FOTO ── */
+    .prod-foto {
+      height: 200px;
+      background:
+        repeating-linear-gradient(
+          45deg,
+          rgba(200,146,42,.04) 0px,
+          rgba(200,146,42,.04) 1px,
+          transparent 1px,
+          transparent 12px
+        ),
+        rgba(92,46,14,.35);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px;
+      border-bottom: 2px solid rgba(200,146,42,.2);
+      position: relative;
+    }
+    .prod-foto-icon { font-size: 36px; opacity: .35; }
+    .prod-foto-txt {
+      font-size: 10px; font-weight: 900; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--dourado); opacity: .5;
+    }
+    /* cantos decorativos na foto */
+    .prod-foto::before, .prod-foto::after {
+      content: ''; position: absolute;
+      width: 18px; height: 18px;
+      border-color: rgba(200,146,42,.35); border-style: solid;
+    }
+    .prod-foto::before { top: 8px; left: 8px; border-width: 2px 0 0 2px; }
+    .prod-foto::after  { bottom: 10px; right: 8px; border-width: 0 2px 2px 0; }
+
+    .prod-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--dourado); color: var(--marrom);
+      font-size: 9px; font-weight: 900; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
+    }
+
+    .prod-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+    .prod-cat {
+      font-size: 10px; font-weight: 900; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--dourado); margin-bottom: 5px;
+    }
+    .prod-body h3 {
+      font-size: 15px; font-weight: 700; color: var(--creme);
+      margin-bottom: 12px; flex: 1; line-height: 1.4;
+    }
+
+    .price-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+    .price-de { font-size: 12px; color: rgba(245,230,200,.4); text-decoration: line-through; }
+    .price-por {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 24px; color: var(--dourado-claro); line-height: 1;
+    }
+    .price-off {
+      background: rgba(200,146,42,.15); color: var(--dourado);
+      border: 1px solid rgba(200,146,42,.3);
+      font-size: 10px; font-weight: 900; padding: 2px 6px; border-radius: 2px;
+    }
+
+    .prod-btn {
+      width: 100%;
+      background: var(--dourado); color: var(--marrom);
+      border: none; padding: 11px;
+      font-weight: 900; font-size: 13px; letter-spacing: 1px;
+      text-transform: uppercase; cursor: pointer;
+      font-family: 'Lato', sans-serif;
+      border-radius: 3px;
+      transition: background .2s;
+    }
+    .prod-btn:hover { background: var(--dourado-claro); }
+
+    .ver-mais-row { text-align: center; margin-top: 42px; }
+
+    /* ══════════════════════════════
+       BANNER DESTAQUE
+    ══════════════════════════════ */
+    .banner-destaque {
+      margin: 0;
+      position: relative; overflow: hidden;
+      padding: 70px 32px;
+      text-align: center;
+    }
+    .banner-destaque .wood-bg {
+      position: absolute; inset: 0;
+    }
+    .banner-destaque::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,.6) 0%, rgba(59,31,10,.5) 100%);
+    }
+    .banner-inner {
+      position: relative; z-index: 2;
+      max-width: 680px; margin: 0 auto;
+    }
+    .banner-inner h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(38px, 5vw, 62px);
+      color: var(--branco);
+      text-shadow: 2px 4px 16px rgba(0,0,0,.8);
+      margin-bottom: 10px; line-height: 1.1;
+    }
+    .banner-inner h2 em { font-style: normal; color: var(--dourado-claro); }
+    .banner-inner p { color: rgba(245,230,200,.7); font-size: 16px; margin-bottom: 28px; }
+
+    /* Linha ornamental */
+    .ornament {
+      display: flex; align-items: center; gap: 14px;
+      justify-content: center; margin: 18px 0;
+    }
+    .ornament::before, .ornament::after {
+      content: ''; flex: 1; max-width: 100px;
+      height: 1px; background: var(--dourado); opacity: .5;
+    }
+    .ornament span { color: var(--dourado); font-size: 18px; }
+
+    /* ══════════════════════════════
+       VANTAGENS
+    ══════════════════════════════ */
+    .vant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .vant-card {
+      border: 1px solid rgba(200,146,42,.2);
+      border-radius: 4px; padding: 32px 22px; text-align: center;
+      transition: border-color .2s, background .2s;
+    }
+    .vant-card:hover {
+      border-color: var(--dourado);
+      background: rgba(200,146,42,.05);
+    }
+    .vant-icon { font-size: 40px; margin-bottom: 16px; }
+    .vant-card h3 {
+      font-size: 15px; font-weight: 900; letter-spacing: .5px;
+      color: var(--creme); margin-bottom: 8px; text-transform: uppercase;
+    }
+    .vant-card p { font-size: 14px; color: rgba(245,230,200,.6); line-height: 1.7; }
+
+    /* ══════════════════════════════
+       DEPOIMENTOS
+    ══════════════════════════════ */
+    .dep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+    .dep-card {
+      border: 1px solid rgba(200,146,42,.15);
+      border-radius: 4px; padding: 28px;
+      border-top: 3px solid var(--dourado);
+      position: relative;
+    }
+    .dep-aspas {
+      font-family: 'Dancing Script', cursive;
+      font-size: 72px; line-height: .6;
+      color: var(--dourado); opacity: .3;
+      position: absolute; top: 14px; left: 18px;
+    }
+    .estrelas { color: var(--dourado); font-size: 16px; margin-bottom: 12px; }
+    .dep-card blockquote {
+      font-size: 15px; color: rgba(245,230,200,.75);
+      line-height: 1.75; font-style: italic;
+      margin-bottom: 18px; border: none; padding: 0;
+    }
+    .dep-autor { display: flex; align-items: center; gap: 12px; }
+    .dep-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--dourado), var(--marrom-claro));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 14px; color: var(--marrom);
+      border: 2px solid var(--dourado);
+      flex-shrink: 0;
+    }
+    .dep-nome { font-size: 14px; font-weight: 900; color: var(--creme); }
+    .dep-local { font-size: 12px; color: var(--dourado); }
+
+    /* ══════════════════════════════
+       CTA FINAL
+    ══════════════════════════════ */
+    .cta-section {
+      position: relative; overflow: hidden;
+      padding: 90px 32px; text-align: center;
+    }
+    .cta-section .wood-bg { position: absolute; inset: 0; }
+    .cta-section::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,.3) 0%, rgba(10,3,0,.75) 100%);
+    }
+    .cta-inner {
+      position: relative; z-index: 2;
+      max-width: 640px; margin: 0 auto;
+    }
+    .cta-inner h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(44px, 5.5vw, 70px);
+      color: var(--branco); line-height: 1.05;
+      text-shadow: 2px 4px 16px rgba(0,0,0,.8);
+      margin-bottom: 14px;
+    }
+    .cta-inner h2 em { font-style: normal; color: var(--dourado-claro); }
+    .cta-inner p { color: rgba(245,230,200,.7); font-size: 17px; margin-bottom: 34px; }
+    .btn-cta-grande {
+      background: var(--dourado); color: var(--marrom);
+      padding: 16px 40px; border: none; border-radius: 4px;
+      font-size: 16px; font-weight: 900; letter-spacing: 1.5px;
+      text-transform: uppercase; cursor: pointer;
+      font-family: 'Lato', sans-serif;
+      display: inline-flex; align-items: center; gap: 10px;
+      box-shadow: 0 6px 30px rgba(200,146,42,.45);
+      transition: transform .15s, box-shadow .2s, background .2s;
+    }
+    .btn-cta-grande:hover { background: var(--dourado-claro); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(200,146,42,.6); }
+    .cta-detalhe { color: rgba(245,230,200,.35); font-size: 12px; letter-spacing: 1px; margin-top: 16px; text-transform: uppercase; }
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    footer {
+      background: #0e0603;
+      border-top: 3px solid var(--dourado);
+      padding: 56px 32px 28px;
+    }
+    .footer-grid {
+      max-width: 1140px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 44px;
+    }
+    .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .footer-brand img { height: 48px; object-fit: contain; }
+    .footer-brand-nome {
+      font-family: 'Dancing Script', cursive;
+      font-size: 24px; color: var(--dourado-claro);
+    }
+    .footer-desc { font-size: 14px; color: rgba(245,230,200,.45); line-height: 1.8; max-width: 250px; }
+
+    .social-row { display: flex; gap: 10px; margin-top: 16px; }
+    .social-link {
+      width: 38px; height: 38px; border-radius: 3px;
+      border: 1px solid rgba(200,146,42,.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; color: var(--creme);
+      transition: border-color .2s, background .2s, transform .2s;
+      text-decoration: none;
+    }
+    .social-link:hover { border-color: var(--dourado); background: rgba(200,146,42,.12); transform: scale(1.1); }
+
+    .footer-col h4 {
+      font-size: 12px; font-weight: 900; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--dourado);
+      margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 1px solid rgba(200,146,42,.2);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 9px; }
+    .footer-col ul li a {
+      color: rgba(245,230,200,.4); font-size: 14px; text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-col ul li a:hover { color: var(--dourado-claro); }
+
+    .footer-bottom {
+      max-width: 1140px; margin: 0 auto;
+      border-top: 1px solid rgba(200,146,42,.1);
+      padding-top: 22px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+      font-size: 12px; color: rgba(245,230,200,.25); letter-spacing: .5px;
+    }
+
+    /* WHATS FLUTUANTE */
+    .float-whats {
+      position: fixed; bottom: 28px; right: 28px;
+      background: #25D366; color: white;
+      width: 58px; height: 58px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 27px; text-decoration: none;
+      box-shadow: 0 6px 24px rgba(37,211,102,.5);
+      z-index: 300; animation: pulse-ring 2.5s ease infinite;
+      transition: transform .2s;
+    }
+    .float-whats:hover { transform: scale(1.1); }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeInLeft  { from { opacity:0; transform:translateX(-30px); } to { opacity:1; transform:translateX(0); } }
+    @keyframes fadeInRight { from { opacity:0; transform:translateX(30px);  } to { opacity:1; transform:translateX(0); } }
+    @keyframes pulse-ring  { 0% { box-shadow:0 0 0 0 rgba(37,211,102,.5); } 70% { box-shadow:0 0 0 16px rgba(37,211,102,0); } 100% { box-shadow:0 0 0 0 rgba(37,211,102,0); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      nav.main-nav { display:none; flex-direction:column; position:absolute; top:68px; left:0; right:0; background:#1e0d03; border-bottom:2px solid var(--dourado); padding:16px 20px; gap:4px; }
+      nav.main-nav.open { display:flex; }
+      .menu-toggle { display:flex; }
+      .hero-inner { grid-template-columns:1fr; padding:60px 24px; text-align:center; }
+      .hero-logo-frame { display:none; }
+      .hero p { margin:0 auto 32px; }
+      .hero-btns { justify-content:center; }
+      .hero-eyebrow { justify-content:center; }
+      .faixa { flex-wrap:wrap; }
+      .faixa-item { min-width:50%; border-right:none; border-bottom:1px solid rgba(59,31,10,.2); }
+      .footer-grid { grid-template-columns:1fr; gap:24px; }
+      .footer-bottom { flex-direction:column; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="logo-header" href="#">
+    <img src="logo_estilo_caipira.png" alt="Estilo Caipira">
+    <div class="logo-nome">
+      Estilo Caipira
+      <small>Desde 2019</small>
+    </div>
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="#categorias">Categorias</a>
+    <a href="#novidades">Novidades</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <button class="btn-whats-header" onclick="whatsapp()">💬 WhatsApp</button>
+    <button class="menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wood-bg" style="position:absolute;inset:0;"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow"><span>🤠 Moda Country Autêntica</span></div>
+      <h1>Viva o <em>Estilo</em><br>Caipira</h1>
+      <p class="hero-sub">Desde 2019 · Raiz de Verdade</p>
+      <p>Roupas, botas e acessórios para quem tem orgulho das raízes. Aqui você não compra só roupa — você compra identidade.</p>
+      <div class="hero-btns">
+        <button class="btn-gold" onclick="document.getElementById('novidades').scrollIntoView({behavior:'smooth'})">🛍️ Ver Coleção</button>
+        <button class="btn-ghost" onclick="whatsapp()">💬 Falar Conosco</button>
+      </div>
+    </div>
+    <div class="hero-logo-frame">
+      <div class="hero-logo-inner">
+        <div class="corner-tl"></div>
+        <div class="corner-br"></div>
+        <img src="logo_estilo_caipira.png" alt="Estilo Caipira">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA DOURADA -->
+<div class="faixa">
+  <div class="faixa-item"><div class="faixa-num">5+</div><div class="faixa-label">Anos de Tradição</div></div>
+  <div class="faixa-item"><div class="faixa-num">500+</div><div class="faixa-label">Produtos no Estoque</div></div>
+  <div class="faixa-item"><div class="faixa-num">2 mil</div><div class="faixa-label">Clientes Satisfeitos</div></div>
+  <div class="faixa-item"><div class="faixa-num">10x</div><div class="faixa-label">Sem Juros</div></div>
+</div>
+
+<!-- CATEGORIAS -->
+<section class="section wood-bg" id="categorias">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">🗂️ Departamentos</span>
+      <h2>Compre por Categoria</h2>
+      <p>Do chapéu à bota, tudo que você precisa para montar o look perfeito.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card wood-light" href="#">
+        <div class="cat-card-img">👗</div>
+        <div class="cat-card-body"><h3>Feminino</h3><small>Camisas & Vestidos</small></div>
+      </a>
+      <a class="cat-card wood-light" href="#">
+        <div class="cat-card-img">👕</div>
+        <div class="cat-card-body"><h3>Masculino</h3><small>Camisas & Calças</small></div>
+      </a>
+      <a class="cat-card wood-light" href="#">
+        <div class="cat-card-img">🤠</div>
+        <div class="cat-card-body"><h3>Chapéus</h3><small>Country & Rodeio</small></div>
+      </a>
+      <a class="cat-card wood-light" href="#">
+        <div class="cat-card-img">🥾</div>
+        <div class="cat-card-body"><h3>Botas</h3><small>Botinas & Tênis</small></div>
+      </a>
+      <a class="cat-card wood-light" href="#">
+        <div class="cat-card-img">🧒</div>
+        <div class="cat-card-body"><h3>Infantil</h3><small>Para os pequenos</small></div>
+      </a>
+      <a class="cat-card wood-light" href="#">
+        <div class="cat-card-img">✨</div>
+        <div class="cat-card-body"><h3>Acessórios</h3><small>Cintos & Fivelas</small></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NOVIDADES -->
+<section class="section" style="background:#2a1205;" id="novidades">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">🆕 Chegou Agora</span>
+      <h2>Novidades da Coleção</h2>
+      <p>Os lançamentos mais quentes — foto da peça em breve!</p>
+    </div>
+    <div class="produtos-grid">
+
+      <div class="prod-card wood-light">
+        <div class="prod-foto">
+          <span class="prod-badge">🔥 Lançamento</span>
+          <span class="prod-foto-icon">📷</span>
+          <span class="prod-foto-txt">Adicionar foto</span>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Feminino · Camisas</div>
+          <h3>Camisa Country Feminina Xadrez</h3>
+          <div class="price-row">
+            <span class="price-de">R$ 289,90</span>
+            <span class="price-por">R$ 239,90</span>
+            <span class="price-off">-17%</span>
+          </div>
+          <button class="prod-btn" onclick="whatsapp('Camisa Country Feminina Xadrez')">💬 Quero essa</button>
+        </div>
+      </div>
+
+      <div class="prod-card wood-light">
+        <div class="prod-foto">
+          <span class="prod-foto-icon">📷</span>
+          <span class="prod-foto-txt">Adicionar foto</span>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Masculino · Calças</div>
+          <h3>Calça Jeans Cowboy Cut Tradicional</h3>
+          <div class="price-row">
+            <span class="price-de">R$ 219,90</span>
+            <span class="price-por">R$ 179,90</span>
+            <span class="price-off">-18%</span>
+          </div>
+          <button class="prod-btn" onclick="whatsapp('Calça Jeans Cowboy Cut')">💬 Quero essa</button>
+        </div>
+      </div>
+
+      <div class="prod-card wood-light">
+        <div class="prod-foto">
+          <span class="prod-badge">⭐ Destaque</span>
+          <span class="prod-foto-icon">📷</span>
+          <span class="prod-foto-txt">Adicionar foto</span>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Chapéus</div>
+          <h3>Chapéu Pralana Arena Felt Country</h3>
+          <div class="price-row">
+            <span class="price-de">R$ 599,90</span>
+            <span class="price-por">R$ 499,90</span>
+            <span class="price-off">-17%</span>
+          </div>
+          <button class="prod-btn" onclick="whatsapp('Chapéu Pralana Arena')">💬 Quero esse</button>
+        </div>
+      </div>
+
+      <div class="prod-card wood-light">
+        <div class="prod-foto">
+          <span class="prod-foto-icon">📷</span>
+          <span class="prod-foto-txt">Adicionar foto</span>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Botas · Feminino</div>
+          <h3>Bota Couro Feminina Bordada</h3>
+          <div class="price-row">
+            <span class="price-de">R$ 529,90</span>
+            <span class="price-por">R$ 449,90</span>
+            <span class="price-off">-15%</span>
+          </div>
+          <button class="prod-btn" onclick="whatsapp('Bota Couro Feminina Bordada')">💬 Quero essa</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="ver-mais-row">
+      <button class="btn-gold" onclick="whatsapp()">Ver catálogo completo 🐴</button>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER DESTAQUE -->
+<div class="banner-destaque">
+  <div class="wood-bg" style="position:absolute;inset:0;"></div>
+  <div class="banner-inner">
+    <div class="ornament"><span>🤠</span></div>
+    <h2>10% OFF no <em>Pix</em><br>+ Frete Grátis</h2>
+    <p>Para compras acima de R$ 299,00 enviamos para todo o Brasil. Use o cupom na primeira compra.</p>
+    <div class="ornament"><span>✦</span></div>
+    <button class="btn-gold" onclick="whatsapp()">💬 Aproveitar agora</button>
+  </div>
+</div>
+
+<!-- VANTAGENS -->
+<section class="section" style="background:#1a0a02;" id="sobre">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">✅ Nosso diferencial</span>
+      <h2>Por que o Estilo Caipira?</h2>
+    </div>
+    <div class="vant-grid">
+      <div class="vant-card">
+        <div class="vant-icon">🥾</div>
+        <h3>Produto Autêntico</h3>
+        <p>Trabalhamos apenas com as melhores marcas do mercado country — TXC, Tassa, Wrangler e muito mais.</p>
+      </div>
+      <div class="vant-card">
+        <div class="vant-icon">💬</div>
+        <h3>Atendimento Pessoal</h3>
+        <p>Você fala diretamente com a gente pelo WhatsApp. Atendimento de quem entende de moda country.</p>
+      </div>
+      <div class="vant-card">
+        <div class="vant-icon">📦</div>
+        <h3>Entrega em Todo Brasil</h3>
+        <p>Enviamos pelos Correios com rastreamento para todo o território nacional, direto pra você.</p>
+      </div>
+      <div class="vant-card">
+        <div class="vant-icon">🤝</div>
+        <h3>Desde 2019</h3>
+        <p>Mais de 5 anos vestindo quem tem raiz e orgulho de ser caipira. Tradição e confiança acima de tudo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section wood-bg">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">⭐ Avaliações</span>
+      <h2>Quem Usa, Aprova</h2>
+      <p>Clientes reais que vestem o estilo com orgulho.</p>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-aspas">"</div>
+        <div class="estrelas">★★★★★</div>
+        <blockquote>"A camisa chegou ainda mais bonita do que na foto. Qualidade incrível e entrega rápida. Já indiquei para várias amigas!"</blockquote>
+        <div class="dep-autor">
+          <div class="dep-avatar">AM</div>
+          <div><div class="dep-nome">Ana Moreira</div><div class="dep-local">Goiânia – GO</div></div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-aspas">"</div>
+        <div class="estrelas">★★★★★</div>
+        <blockquote>"Minha bota chegou perfeita, embalagem caprichada e atendimento top. Loja de confiança, sempre volto aqui!"</blockquote>
+        <div class="dep-autor">
+          <div class="dep-avatar">RC</div>
+          <div><div class="dep-nome">Rodrigo Cavalcante</div><div class="dep-local">Uberlândia – MG</div></div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-aspas">"</div>
+        <div class="estrelas">★★★★★</div>
+        <blockquote>"Comprei o chapéu pelo WhatsApp e foi muito fácil. Produto original e preço justo. Estilo Caipira tem minha preferência!"</blockquote>
+        <div class="dep-autor">
+          <div class="dep-avatar">JS</div>
+          <div><div class="dep-nome">Juliana Santos</div><div class="dep-local">Brasília – DF</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="contato">
+  <div class="cta-inner">
+    <div class="ornament"><span>🐎</span></div>
+    <h2>Vista sua <em>identidade</em><br>country hoje!</h2>
+    <p>Fale com a gente agora pelo WhatsApp e monte o look perfeito com quem entende.</p>
+    <button class="btn-cta-grande" onclick="whatsapp()">💬 Chamar no WhatsApp</button>
+    <p class="cta-detalhe">Atendimento rápido · 10x sem juros · Entrega para todo Brasil</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="1775224824142_image.png" alt="Estilo Caipira">
+        <span class="footer-brand-nome">Estilo Caipira</span>
+      </div>
+      <p class="footer-desc">Moda country autêntica desde 2019. Roupas, botas, chapéus e acessórios para quem tem orgulho das raízes.</p>
+      <div class="social-row">
+        <a class="social-link" href="#" title="Instagram">📸</a>
+        <a class="social-link" href="#" onclick="whatsapp()" title="WhatsApp">💬</a>
+        <a class="social-link" href="#" title="Facebook">👍</a>
+        <a class="social-link" href="#" title="TikTok">🎵</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="#">Feminino</a></li>
+        <li><a href="#">Masculino</a></li>
+        <li><a href="#">Chapéus</a></li>
+        <li><a href="#">Botas & Botinas</a></li>
+        <li><a href="#">Infantil</a></li>
+        <li><a href="#">Acessórios</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#">Quem Somos</a></li>
+        <li><a href="#">Formas de Pagamento</a></li>
+        <li><a href="#">Envio & Entrega</a></li>
+        <li><a href="#">Trocas & Devoluções</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Atendimento</h4>
+      <ul>
+        <li><a href="#" onclick="whatsapp()">💬 WhatsApp</a></li>
+        <li><a href="#">📍 Nossa Localização</a></li>
+        <li><a href="#">📧 E-mail</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Estilo Caipira · Todos os direitos reservados · Desde 2019</span>
+    <span>🤠 Feito por Rolim Labs</span>
+  </div>
+</footer>
+
+<a class="float-whats" href="#" onclick="whatsapp(); return false;" title="WhatsApp">💬</a>
+
+<script>
+  function whatsapp(produto) {
+    const numero  = "5599999999999"; // ALTERAR AQUI
+    let msg = "Olá! Vim pelo site e gostaria de saber mais sobre os produtos.";
+    if (produto) msg = `Olá! Vim pelo site e tenho interesse em: *${produto}*. Pode me ajudar?`;
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`);
+  }
+</script>
+</body>
+</html>
